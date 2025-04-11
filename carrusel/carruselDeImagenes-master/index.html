@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dedicatoria Especial para Nohara 🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://www.transparenttextures.com/patterns/blue-jeans.png');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            background-color: #2c3e50;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #e74c3c;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        p {
+            font-size: 1.3em;
+            color: #fff;
+            line-height: 1.6;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: 700;
+        }
+
+        .button {
+            background-color: #e74c3c;
+            color: #fff;
+            font-size: 1.3em;
+            padding: 15px 25px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: 0.3s;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .button:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+
+        .message-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #198552;
+            border: 1px solid #e2e2e2;
+            border-radius: 15px;
+            display: none;
+            font-size: 1.5em;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .message-box p {
+            margin: 10px 0;
+        }
+
+        .heart {
+            color: #e74c3c;
+            font-size: 1.5em;
+        }
+
+        .close-btn {
+            background-color: #c0392b;
+            color: #fff;
+            font-size: 1em;
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .close-btn:hover {
+            background-color: #e74c3c;
+            transform: scale(1.1);
+        }
+
+        /* Carrusel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: max-content;
+        }
+
+        .carousel-images img {
+            width: 600px;
+            height: 300px;
+            object-fit: contain;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 2em;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>¡Para Arana! ⚽</h1>
+
+        <!-- Carrusel de imágenes -->
+        <div class="carousel-container">
+            <div class="carousel-images" id="carouselImages">
+                <img src="./img/ARANA.png" alt="">
+                <img src="./img/1 .jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/3.jpg" alt="">
+                <img src="img/4.jpg" alt="">
+                <!-- <img src="img/5.jpg" alt="">
+                <img src="img/6.JPG" alt="">
+                <img src="img/8.jpg" alt="">
+                <img src="img/9.jpg" alt=""> -->
+            </div>
+            <div class="carousel-buttons">
+                <button class="carousel-button" onclick="moveCarousel(-1)">❮</button>
+                <button class="carousel-button" onclick="moveCarousel(1)">❯</button>
+            </div>
+        </div>
+
+        <!-- Dedicatoria -->
+        <p>¡Hey, Arana! 💥</p>
+        <p>¡Eres la máquina de fútbol que todos queremos ver en la cancha! 💪⚽ Cada vez que corres hacia el balón, siento que la magia está a punto de suceder. ¡Tus jugadas son puro arte! 😍</p>
+        <p>No importa el minuto ni el marcador, ¡sabemos que en cualquier momento tú vas a hacer historia! 💥 Cada gol que marcas, cada pase preciso, es como si tuvieras una conexión directa con el fútbol. 🎯</p>
+        <p><span class="highlight">Nohara</span> está aquí, siempre apoyándote en cada momento, porque sé que lo grande está por venir. ¡Que nunca falte el corazón en la cancha! ❤️</p>
+
+        <!-- Botón de mensaje -->
+        <button class="button" onclick="showMessage()">Ver Mensaje Especial</button>
+
+        <!-- Mensaje especial -->
+        <div class="message-box" id="messageBox">
+            <p><strong>Con todo el cariño, desde el primer minuto,</strong></p>
+            <p><strong>Nohara <span class="heart">💚</span></strong></p>
+            <button class="close-btn" onclick="closeMessage()">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('messageBox').style.display = 'block';
+        }
+
+        function closeMessage() {
+            document.getElementById('messageBox').style.display = 'none';
+        }
+
+        // Carrusel de imágenes
+        let currentIndex = 0;
+        const carouselImages = document.getElementById('carouselImages');
+        const totalImages = carouselImages.children.length;
+
+        function moveCarousel(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = totalImages - 1;
+            if (currentIndex >= totalImages) currentIndex = 0;
+
+            const offset = -currentIndex * 600; // Ancho de cada imagen
+            carouselImages.style.transform = `translateX(${offset}px)`;
+        }
+
+        // Cambio automático cada 3 segundos
+        setInterval(() => {
+            moveCarousel(1);
+        }, 3000);
+    </script>
+</body>
+</html>
