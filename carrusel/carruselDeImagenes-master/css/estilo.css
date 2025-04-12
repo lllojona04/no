@@ -1,6 +1,6 @@
 /*Autor: Jorge García Castro*/
 
-#slider{
+/*#slider{
     margin: 0 auto;
     width: 800px;
     height: 500px;
@@ -8,7 +8,7 @@
     background-color: black;
 }
 /*Valores de las imagenes*/
-#slider img{
+/*#slider img{
     margin: 0 auto;
     -moz-transition: opacity 2s;
     -webkit-transition: opacity 2s;
@@ -19,7 +19,7 @@
     opacity: 0;
 }
 /*Para que la primera imagen este activa al inicio*/
-#slider img:nth-child(1){
+/*#slider img:nth-child(1){
     opacity: 1;
 }
 
@@ -37,4 +37,198 @@ table{
 }
 #derecha{
     text-align: left;
+}
+
+
+
+/*_______________________________________________________________________________________*/
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://www.transparenttextures.com/patterns/blue-jeans.png');
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+    color: #fff;
+    text-align: center;
+    background-color: #2c3e50;
+}
+
+.container {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding-top: 40px; /* Asegura espacio arriba */
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0 0 20px 0; /* Elimina margin-top */
+    color: #e74c3c;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+p {
+    font-size: 1.3em;
+    color: #fff;
+    line-height: 1.6;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.button {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 1.3em;
+    padding: 15px 25px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.button:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+.message-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #198552;
+    border: 1px solid #e2e2e2;
+    border-radius: 15px;
+    display: none;
+    font-size: 1.5em;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.message-box p {
+    margin: 10px 0;
+}
+
+.heart {
+    color: #e74c3c;
+    font-size: 1.5em;
+}
+
+.close-btn {
+    background-color: #c0392b;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #e74c3c;
+    transform: scale(1.1);
+}
+
+/* Carrusel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-width: 600px;
+    height: auto; /* Evita que se recorten verticalmente */
+    object-fit: contain; /* Muestra toda la imagen sin recortar */
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/*_______________________________________________________________________________________*/
+
+
+@media (max-width: 600px) {
+
+    .carousel-images {
+        width: 100%;
+    }
+    .carousel-images img {
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .button {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+    p{
+        font-size: 0.8rem;
+    }
 }
