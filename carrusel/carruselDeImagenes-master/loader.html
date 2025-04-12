@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando la magia ⚽</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #1b2735, #090a0f);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .loader-container {
+      text-align: center;
+      color: white;
+    }
+
+    .loader-title {
+      font-size: 2.5em;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px rgba(255,255,255,0.3);
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    .loader-bar {
+      width: 300px;
+      height: 8px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    .progress {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, #e74c3c, #f1c40f);
+      animation: loading 3s forwards;
+    }
+
+    @keyframes loading {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader-container">
+    <div class="loader-title">Cargando magia </div>
+    <div class="loader-bar">
+      <div class="progress"></div>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "./index.html"; // Cambia esto por tu archivo real
+    }, 3500);
+  </script>
+
+</body>
+</html>
