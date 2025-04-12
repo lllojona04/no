@@ -5,164 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dedicatoria Especial para Nohara 🎉</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: url('https://www.transparenttextures.com/patterns/blue-jeans.png');
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #fff;
-            text-align: center;
-            background-color: #2c3e50;
-        }
+    <link href="./css/estilo.css" rel="stylesheet">
 
-        .container {
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 20px;
-            padding: 40px;
-            width: 90%;
-            max-width: 800px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #e74c3c;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-        }
-
-        p {
-            font-size: 1.3em;
-            color: #fff;
-            line-height: 1.6;
-            margin: 15px 0;
-            font-weight: 500;
-        }
-
-        .highlight {
-            color: #e74c3c;
-            font-weight: 700;
-        }
-
-        .button {
-            background-color: #e74c3c;
-            color: #fff;
-            font-size: 1.3em;
-            padding: 15px 25px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            margin-top: 30px;
-            transition: 0.3s;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .button:hover {
-            background-color: #c0392b;
-            transform: scale(1.1);
-        }
-
-        .message-box {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #198552;
-            border: 1px solid #e2e2e2;
-            border-radius: 15px;
-            display: none;
-            font-size: 1.5em;
-            color: #2c3e50;
-            text-align: center;
-        }
-
-        .message-box p {
-            margin: 10px 0;
-        }
-
-        .heart {
-            color: #e74c3c;
-            font-size: 1.5em;
-        }
-
-        .close-btn {
-            background-color: #c0392b;
-            color: #fff;
-            font-size: 1em;
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-
-        .close-btn:hover {
-            background-color: #e74c3c;
-            transform: scale(1.1);
-        }
-
-        /* Carrusel */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: 30px auto;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .carousel-images {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: max-content;
-        }
-
-        .carousel-images img {
-            width: 600px;
-            height: 300px;
-            object-fit: contain;
-            flex-shrink: 0;
-            border-radius: 10px;
-        }
-
-        .carousel-buttons {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .carousel-button {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            font-size: 2em;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-
-        .carousel-button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-    </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>¡Para Arana! ⚽</h1>
+        <div class="title"> 
+            <h1>¡Para Arana! ⚽</h1>
+        </div>
 
         <!-- Carrusel de imágenes -->
         <div class="carousel-container">
@@ -219,7 +70,9 @@
             if (currentIndex < 0) currentIndex = totalImages - 1;
             if (currentIndex >= totalImages) currentIndex = 0;
 
-            const offset = -currentIndex * 600; // Ancho de cada imagen
+            const imageWidth = carouselImages.children[0].clientWidth; // obtiene el ancho real de cada imagen
+            const offset = -currentIndex * imageWidth;
+            //const offset = -currentIndex * 600; // Ancho de cada imagen <- no es dinamico ya que siempre se supondra que la pantalla es mayor a 600 px
             carouselImages.style.transform = `translateX(${offset}px)`;
         }
 
